@@ -4,7 +4,7 @@ class CreateSpots < ActiveRecord::Migration[6.1]
       t.string :title, null: false
       t.text :description, null: false
       t.decimal :price, null: false
-      t.json :images, null: false
+      t.json :images
 
       t.timestamps
     end
