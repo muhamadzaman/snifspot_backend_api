@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: bd880b3ddba433
-  password: a7253140
+  username: oxfghobt0garm9mo
+  password: brs3jverqtox7vqw
   host: localhost
 
 development:
@@ -51,6 +51,4 @@ test:
 
 production:
   <<: *default
-  database: snifspot_master_api_production
-  password: <%= ENV['STACKHERO_MYSQL_ROOT_PASSWORD'] %>
-  host: <%= ENV['STACKHERO_MYSQL_HOST'] %>
+  url: <%= ENV['DATABASE_URL'] %>
