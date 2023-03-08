@@ -51,4 +51,6 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: snifspot_master_api_production
+  password: <%= ENV['STACKHERO_MYSQL_ROOT_PASSWORD'] %>
+  host: <%= ENV['STACKHERO_MYSQL_HOST'] %>
