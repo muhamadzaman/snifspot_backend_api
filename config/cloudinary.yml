@@ -1,0 +1,15 @@
+development:
+  cloud_name: 'dlr304gz7'
+  api_key: '122613578681485'
+  api_secret: 'OjM_HoENvdhlPlCrCRUagDq2uNM'
+  secure: true
+  enhance_image_tag: true
+  static_image_support: true
+
+production:
+  cloud_name: 'dlr304gz7'
+  api_key: '122613578681485'
+  api_secret: 'OjM_HoENvdhlPlCrCRUagDq2uNM'
+  secure: true
+  enhance_image_tag: true
+  static_image_support: true
