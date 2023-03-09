@@ -16,7 +16,7 @@ class SpotsController < ApplicationController
 
     def create
         spot = Spot.new(spot_params)
-        spot.images = upload_images(spot_params[:images]) unless spot_params[:images]
+        spot.images = upload_images(spot_params[:images]) unless spot_params[:images].blank?
 
         if spot.save
             render json: { message: "Spot Added Successfully" }, status: :ok
@@ -26,7 +26,7 @@ class SpotsController < ApplicationController
     end
 
     def update
-        images = upload_images(params[:images]) unless params[:images]
+        images = upload_images(params[:images]) unless params[:images].blank?
         if @spot.update(spot_params.merge({images: images}))
             render json: { message: "Spot updated Successfully" }, status: :ok
         else
