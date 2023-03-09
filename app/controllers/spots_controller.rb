@@ -51,7 +51,7 @@ class SpotsController < ApplicationController
     end
 
     def spot_params
-        params.permit(:title, :description, :price)
+        params.permit(:title, :description, :price, images: [])
     end
 
     def upload_images(images)
