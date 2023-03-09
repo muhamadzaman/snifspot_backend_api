@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
     
     skip_before_action :verify_authenticity_token
-    before_action :find_spot, only: [:create, :update]
+    before_action :find_spot, only: [:create]
     before_action :find_spot_review, only: [:update]
 
     def create
@@ -29,9 +29,9 @@ class ReviewsController < ApplicationController
     end
 
     def find_spot_review
-        @review = @spot.reviews.find_by_id(params[:review_id])
+        @review = Review.find_by_id(params[:id])
 
-        render json: { message: "No such review matches to that id." }, status: :unprocessable_entity unless spot
+        render json: { message: "No such review matches to that id." }, status: :unprocessable_entity unless @review
     end
 
     def review_params
